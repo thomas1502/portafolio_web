@@ -1,42 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Estilo general */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Columna izquierda */
+.left-column {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: -300px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 5%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-info {
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.profile-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.card {
-  padding: 2em;
+.clickable {
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.read-the-docs {
-  color: #888;
+.clickable:hover {
+  color: darkblue;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #555; /* Opcional */
+}
+
+/* Columna derecha */
+.right-column {
+  width: 65%;
+  padding: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-content: center;
 }

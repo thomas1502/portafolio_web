@@ -1,0 +1,68 @@
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  /* Fondo claro */
+  border: 1px solid #e0e0e0;
+  /* Borde suave */
+  border-radius: 20px;
+  /* Bordes más redondeados */
+  padding: 20px;
+  /* Incrementa el espacio interno */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* Sombra más grande */
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+  /* Ocupa todo el ancho permitido */
+  max-width: 600px;
+  /* Aumenta el ancho máximo */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  /* Animación hover más pronunciada */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Mayor sombra en hover */
+}
+
+.card-icon-container {
+  flex: 0.4;
+  /* 40% del ancho total */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon {
+  margin-top: 20px;
+  font-size: 80px;
+  /* Incrementa el tamaño del icono */
+  color: #030303;
+  /* Color del icono */
+}
+
+.card-content {
+  flex: 0.6;
+  /* 60% del ancho total */
+  padding-left: 24px;
+  /* Mayor espaciado entre el icono y el contenido */
+}
+
+.card-title {
+  margin: 0;
+  font-size: 24px;
+  /* Incrementa el tamaño del título */
+  color: #333;
+  /* Color del título */
+  font-weight: bold;
+}
+
+.card-description {
+  margin: 12px 0 0;
+  font-size: 18px;
+  /* Incrementa el tamaño de la descripción */
+  color: #666;
+  /* Color de la descripción */
+  line-height: 1.8;
+  /* Mayor interlineado */
+}

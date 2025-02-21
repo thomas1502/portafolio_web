@@ -1,11 +1,11 @@
 // CardComponent.jsx
 
 import React from 'react';
-import './CardComponent.css';
+import '../styles/CardComponent.css';
 
-const CardComponent = ({ icon, title, description }) => {
+const CardComponent = ({ icon, title, description, onClick }) => {
   return (
-    <div className="card">
+    <div className="card" onClick={onClick}>
       <div className="card-icon-container">
         <div className="card-icon">{icon}</div>
       </div>

@@ -8,4 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 Comando para actualizar la pagina en github pages:
-git run deploy
+npm run deploy
+
+Instalaciones extras:
+1. npm install react-router-dom

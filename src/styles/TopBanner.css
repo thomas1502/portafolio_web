@@ -1,0 +1,73 @@
+:root {
+    --bg-light: #000;
+    /* Negro en modo claro */
+    --bg-dark: #1a1a1a;
+    /* Gris oscuro en modo oscuro */
+    --text-light: #fff;
+    /* Texto blanco en modo claro */
+    --text-dark: #f5f5f5;
+    /* Texto blanco grisáceo en modo oscuro */
+    --button-light: rgba(255, 255, 255, 0.2);
+    --button-dark: rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light: var(--bg-dark);
+        --bg-dark: #292929;
+        /* Un tono más claro que el fondo */
+        --text-light: var(--text-dark);
+        --text-dark: #e0e0e0;
+        --button-light: rgba(255, 255, 255, 0.3);
+        --button-dark: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;;
+}
+
+.profile-container-banner {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.profile-photo-banner {
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    margin-right: 20px;
+    border: none;
+}
+
+.profile-name-banner {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-light);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.profile-container:hover .profile-name {
+    opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+    .profile-container-banner {
+        margin-left: 0px;
+    }
+}

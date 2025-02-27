@@ -10,8 +10,8 @@ import Other from "../pages/Other";
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/portafolio_web/" element={<Home />} />
-      <Route path="/portafolio_web/about-me" element={<AboutMe />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/about-me" element={<AboutMe />} />
       {/* <Route path="/portafolio_web/experience" element={<Experience />} />
       <Route path="/portafolio_web/education" element={<Education />} />
       <Route path="/portafolio_web/skills" element={<Skills />} />

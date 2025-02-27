@@ -6,7 +6,7 @@ function AboutMe() {
 
   return (
     <div>
-      <TopBanner title="Sobre mí" onBack={() => navigate("/portafolio_web")} />
+      <TopBanner onBack={() => navigate("/")} />
       <p>Aquí va la información detallada sobre mí...</p>
     </div>
   );

@@ -143,6 +143,18 @@ p {
 }
 
 @media (max-width: 480px) {
+  .modal-content {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
   .right-column {
     width: 1%;
     align-items: center;

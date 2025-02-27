@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
 import profilePhoto from "../assets/thomas.jpg";
 import EmailIcon from "@mui/icons-material/Email";
@@ -18,6 +18,18 @@ import {
 
 function Home() {
     const [selectedCard, setSelectedCard] = useState(null);
+
+    useEffect(() => {
+        if (selectedCard !== null) {
+            document.body.style.overflow = "hidden"; // Bloquea el scroll
+        } else {
+            document.body.style.overflow = "auto"; // Restaura el scroll
+        };
+
+        return () => {
+            document.body.style.overflow = "auto"; // Asegura que se restablezca al desmontar
+        };
+    }, [selectedCard]);
 
     const cardData = [
         { icon: <FaInfoCircle />, title: "Sobre mí", summary: "Aquí va un resumen más detallado sobre mí..." },
@@ -93,6 +105,6 @@ function Home() {
             )}
         </div>
     );
-}
+};
 
 export default Home;
